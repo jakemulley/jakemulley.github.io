@@ -1,0 +1,19 @@
+{
+  "name": "jakemulley.github.io",
+  "version": "0.0.1",
+  "description": "My personal website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakemulley/jakemulley.github.io.git"
+  },
+  "author": "Jake Mulley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakemulley/jakemulley.github.io/issues"
+  },
+  "homepage": "https://github.com/jakemulley/jakemulley.github.io#readme",
+  "devDependencies": {
+    "normalize.css": "^7.0.0",
+    "node-sass": "^4.5.3"
+  }
+}
