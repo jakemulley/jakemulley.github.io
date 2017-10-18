@@ -5,7 +5,7 @@ build:
 	@make css templates
 
 css:
-	$(NODE_SASS) ./assets/css -o ./public/_css --output-style compressed
+	$(NODE_SASS) ./assets/css -o ./_css --output-style compressed
 
 templates:
-	cp -a ./assets/templates/. ./public
+	cp -a ./assets/templates/. .
