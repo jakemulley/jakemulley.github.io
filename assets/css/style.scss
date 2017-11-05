@@ -32,9 +32,16 @@ a {
     background-color: $nepal;
     color: $white;
     text-decoration: none;
+    padding: 1px;
     &:hover {
         color: $oxford-blue;
         background-color: transparent;
         text-decoration: underline;
     }
+}
+
+img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 18px;
 }
