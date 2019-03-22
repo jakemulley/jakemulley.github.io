@@ -1,2 +1,3 @@
 # jakemulley.github.io
-My personal site
+
+A static site for https://jakemulley.com

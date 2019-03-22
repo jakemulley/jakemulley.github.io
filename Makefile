@@ -1,7 +1,7 @@
 NODE_SASS=./node_modules/.bin/node-sass
 
 build:
-	@rm -rf ./public
+	@rm -rf ./_css ./_img
 	@make css templates images
 
 css:
