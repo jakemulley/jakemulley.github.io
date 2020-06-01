@@ -30,5 +30,6 @@ jobs:
     - name: Build site
       run: npm run all
     - name: Commit files
-      git add docs
-      git diff --quiet && git diff --staged --quiet || (git commit -m "Build jakemulley.github.io on $(date +%F)"; git push origin master)
+      run: |
+        git add docs
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Build jakemulley.github.io on $(date +%F)"; git push origin master)
