@@ -7,7 +7,7 @@ const templates = require('./templates.js')
 
 const actions = {
   async getAllContent () {
-    return Promise.all(glob.sync('content/**/**.md').map(async function (file) {
+    return Promise.all(glob.sync('content/**/**.md').map(async file => {
       const content = await fs.promises.readFile(file, 'utf8')
       const matter = graymatter(content)
 
@@ -31,7 +31,7 @@ const actions = {
   }
 };
 
-(async function () {
+(async () => {
   const content = await actions.getAllContent()
   return actions.generatePages(content)
 })()
