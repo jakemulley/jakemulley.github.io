@@ -6,7 +6,7 @@
   <meta name="author" content="Jake Mulley">
   <meta name="description" content="Jake Mulley is a Full-Stack Engineer, specialising in Node, with 8 years experience across agencies, startups, public sector and government organisations.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="_css/style.css">
+  <link rel="stylesheet" href="/css/main.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
@@ -19,21 +19,8 @@
 </head>
 <body>
   <div class="wrap">
-    <img src="_img/profile.jpeg" alt="Jake Mulley's headshot">
-    <h1>Jake Mulley</h1>
-    <h2>Full-Stack Engineer</h2>
-    <p>👋 I'm currently working in the <a href="https://digital-land.github.io">Digital Land</a> team at the <a href="https://www.gov.uk/government/organisations/ministry-of-housing-communities-and-local-government">Ministry of Housing, Communities & Local Government</a>.</p>
-    <p>I've previously worked at <a href="https://beta.parliament.uk" class="parliament">UK Parliament</a>, <a href="https://golin.com" class="golin">Golin</a>, and <a href="https://www.myvouchercodes.co.uk" class="mvc">Mindwork Labs</a> (part of MyVoucherCodes) and have 8 years experience working within agencies, startups, public sector and government organisations.</p>
-    <p>I regularly work with:</p>
-    <ul>
-      <li>Node, JavaScript, Angular</li>
-      <li>HTML/CSS, and flavours, such as: Pug, Moustache, Handlebars, Sass/SCSS, LESS</li>
-      <li>Ruby, Rails, PHP, Laravel, Lumen</li>
-      <li>Data-driven, domain-driven design</li>
-      <li>Accessible services, progressive enhancement</li>
-      <li>Modernising legacy products</li>
-    </ul>
-    <p>Some of my work is open source on <a href="https://github.com/jakemulley">GitHub</a>. You can also find me on <a href="https://twitter.com/carboia">Twitter</a>, <a href="https://linkedin.com/in/jakemulley">LinkedIn</a>, or you can <a href="mailto:me@jakemulley.com">email me</a>.</p>
+    {% block content %}
+    {% endblock %}
   </div>
 
   <script type="application/ld+json">
@@ -42,7 +29,7 @@
     "@type": "Person",
     "name": "Jake Mulley",
     "url": "https://jakemulley.com/",
-    "image": "https://jakemulley.com/_img/profile.jpeg",
+    "image": "https://jakemulley.com/assets/images/profile.jpeg",
     "email": "mailto:me@jakemulley.com",
     "sameAs": [
       "https://twitter.com/carboia",

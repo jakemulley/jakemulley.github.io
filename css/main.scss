@@ -1,7 +1,10 @@
-@import 'settings/colours';
-@import '../../node_modules/normalize.css/normalize';
+$alablaster: #F9F9F9;
+$valencia: #DB3344;
+$oxford-blue: #2B3B44;
+$white: #FFF;
 
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,13 +44,13 @@ h2 {
 }
 
 a {
-    background-color: $mandy;
+    background-color: $valencia;
     color: $white;
     text-decoration: none;
     padding: 1px;
     font-weight: 700;
     &:hover {
-        color: $mandy;
+        color: $valencia;
         background-color: transparent;
         text-decoration: underline;
     }
@@ -61,20 +64,4 @@ img {
 
 p:last-of-type {
     margin-bottom: 0;
-}
-
-.parliament, .golin, .mvc {
-    background: transparent;
-}
-
-.parliament {
-    color: $parliament;
-}
-
-.golin {
-    color: $golin;
-}
-
-.mvc {
-    color: $mvc;
 }
