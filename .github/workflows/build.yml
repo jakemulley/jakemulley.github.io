@@ -5,7 +5,7 @@ on:
     paths-ignore:
       - 'docs/**'
     branches:
-      - master
+      - main
 
 env:
   COMMIT_EMAIL: ${{ secrets.COMMIT_EMAIL }}
@@ -25,11 +25,11 @@ jobs:
         git config user.email "${COMMIT_EMAIL}"
         git config user.name "${COMMIT_USERNAME}"
         git remote set-url origin https://${COMMIT_USERNAME}:${COMMIT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        git checkout master
+        git checkout main
     - run: npm install
     - name: Build site
       run: npm run all
     - name: Commit files
       run: |
         git add .
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Build jakemulley.github.io on $(date +%F)"; git push origin master)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Build jakemulley.github.io on $(date +%F)"; git push origin main)
