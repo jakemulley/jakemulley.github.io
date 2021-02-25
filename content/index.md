@@ -1,10 +1,10 @@
 ---
   title: Jake Mulley
-  subtitle: Technical Architect
+  subtitle: Head of Hosting & Digital Operations
   title_image: true
 ---
 
-👋 I'm currently working in the [Architecture and Platforms](https://mojdigital.blog.gov.uk/) team at [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice).
+👋 I'm currently working in the [Platforms and Architecture](https://mojdigital.blog.gov.uk/) team at [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice).
 
 I've previously worked in the [Digital Land](https://digital-land.github.io/) team at [Ministry of Housing, Communities & Local Government](https://www.gov.uk/government/organisations/ministry-of-housing-communities-and-local-government), [UK Parliament](https://parliament.uk/), [Golin](https://golin.com), and [Mindwork Labs](https://www.myvouchercodes.co.uk) (part of MyVoucherCodes).
 
