@@ -11,7 +11,7 @@
     "css": "./node_modules/.bin/node-sass css/main.scss docs/css/main.css --output-style=compressed",
     "content": "node compilers/content.js",
     "all": "npm run css && npm run content && npm run images",
-    "prestart": "mkdir -p ./docs && npm run all",
+    "prestart": "mkdir -p ./docs && npm run all && cp ./CNAME ./docs",
     "start": "node server.js"
   },
   "author": "Jake Mulley",
@@ -24,9 +24,9 @@
     "express": "^4.17.1",
     "glob": "^7.1.6",
     "gray-matter": "^4.0.2",
-    "markdown-it": "^11.0.0",
-    "node-sass": "^4.14.1",
+    "markdown-it": "^12.0.4",
+    "node-sass": "^5.0.0",
     "normalize.css": "^8.0.1",
-    "nunjucks": "^3.2.1"
+    "nunjucks": "^3.2.3"
   }
 }
