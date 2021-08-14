@@ -1,0 +1,13 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  {% if title_image %}<img src="/images/profile.jpeg" alt="Jake Mulley's headshot">{% endif %}
+
+  <h1>{{ title }}</h1>
+
+  {% if subtitle %}
+    <h2>{{ subtitle }}</h2>
+  {% endif %}
+
+  {{ content | safe }}
+{% endblock %}

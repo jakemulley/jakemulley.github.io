@@ -1,4 +1,4 @@
-name: Build jakemulley.github.io
+name: Build jakemulley.com
 
 on:
   push:
@@ -7,29 +7,16 @@ on:
     branches:
       - main
 
-env:
-  COMMIT_EMAIL: ${{ secrets.COMMIT_EMAIL }}
-  COMMIT_TOKEN: ${{ secrets.COMMIT_TOKEN }}
-  COMMIT_USERNAME: ${{ secrets.COMMIT_USERNAME }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2-beta
+    - uses: actions/setup-node@v2
       with:
         node-version: '14'
-    - name: Setup git
-      run: |
-        git config user.email "${COMMIT_EMAIL}"
-        git config user.name "${COMMIT_USERNAME}"
-        git remote set-url origin https://${COMMIT_USERNAME}:${COMMIT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        git checkout main
-    - run: npm install
-    - name: Build site
-      run: npm run all
-    - name: Commit files
-      run: |
-        git add .
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Build jakemulley.github.io on $(date +%F)"; git push origin main)
+    - run: npm ci
+    - run: npm run build
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Build jakemulley.com
