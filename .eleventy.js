@@ -1,3 +1,4 @@
+const htmlmin = require('html-minifier')
 const postcss = require('postcss')([
   require('postcss-import'),
   require('precss'),
@@ -17,6 +18,19 @@ module.exports = (eleventyConfig) => {
   // Passthrough images and favicons
   eleventyConfig.addPassthroughCopy({ './src/_assets/favicons': './favicons' })
   eleventyConfig.addPassthroughCopy({ './src/_assets/images': './images' })
+
+  // Minify HTML
+  eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
+    if (outputPath && outputPath.endsWith('.html')) {
+      return htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      })
+    }
+
+    return content
+  })
 
   // Compile CSS
   eleventyConfig.addWatchTarget('./src/_assets/css/')
