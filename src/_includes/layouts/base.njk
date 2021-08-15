@@ -1,8 +1,14 @@
+{% if page.url == "/" %}
+  {% set pageTitle = title + " | " + subtitle %}
+{% else %}
+  {% set pageTitle = subtitle + " | " + title %}
+{% endif %}
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ title }} | {{ subtitle }}</title>
+  <title>{{ pageTitle }}</title>
   <meta name="author" content="Jake Mulley">
   <meta name="description" content="Jake Mulley is Head of Hosting &amp; Digital Operations at Ministry of Justice, with 9 years experience across agencies, startups, the public sector, charities, and government organisations.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,13 +27,18 @@
   <header>
     <a href="/">
       <img alt="Jake Mulley's headshot" src="/images/profile.jpeg">
-      <h1>Jake Mulley</h1>
+      <h1>{{ title }}</h1>
     </a>
-    <h2>Head of Hosting &amp; Digital Operations</h2>
+    <h2>{{ subtitle }}</h2>
   </header>
   <main class="content">
     {% block content %}
     {% endblock %}
+    {% if page.url !== "/" %}
+      <nav>
+        <p><a href="/">&larr; Back home</a></p>
+      </nav>
+    {% endif %}
   </main>
   <footer>
     <p>👋 Say hello: <a href="https://twitter.com/carboia">Twitter</a>, <a href="https://linkedin.com/in/jakemulley">LinkedIn</a>, <a href="https://github.com/jakemulley">GitHub</a>, <a href="mailto:me@jakemulley.com">e-mail</a></p>
