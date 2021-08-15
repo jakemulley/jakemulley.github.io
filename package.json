@@ -18,6 +18,7 @@
   "homepage": "https://github.com/jakemulley/jakemulley.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "autoprefixer": "^10.3.1",
     "cssnano": "^5.0.7",
@@ -25,6 +26,7 @@
     "normalize.css": "^8.0.1",
     "postcss": "^8.3.6",
     "postcss-import": "^14.0.2",
-    "precss": "^4.0.0"
+    "precss": "^4.0.0",
+    "prismjs": "^1.24.1"
   }
 }
