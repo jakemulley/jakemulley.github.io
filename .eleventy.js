@@ -12,6 +12,11 @@ const postcss = require('postcss')([
 ])
 
 module.exports = (eleventyConfig) => {
+  // Add shortcode to get the current time (useful for cachebusting)
+  eleventyConfig.addShortcode('now', () => {
+    return String(Date.now())
+  })
+
   // Passthrough CNAME
   eleventyConfig.addPassthroughCopy('./src/CNAME')
 
