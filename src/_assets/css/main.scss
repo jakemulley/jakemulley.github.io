@@ -21,6 +21,7 @@ body {
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
   color: $oxford-blue;
+  background: $white;
 
   > header {
     padding: calc($padding * 2) $padding $padding $padding;
