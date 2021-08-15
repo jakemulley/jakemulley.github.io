@@ -2,66 +2,91 @@ $alablaster: #F9F9F9;
 $valencia: #DB3344;
 $oxford-blue: #2B3B44;
 $white: #FFF;
+$padding: 16px;
+$maxWidth: 520px;
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: $alablaster;
-    color: $oxford-blue;
-    font-family: "Open Sans", Helvetica, Verdana, sans-serif;
-    font-size: 18px;
-    line-height: 30px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-feature-settings: "pnum";
-    font-feature-settings: "pnum";
-    -webkit-text-decoration-skip: ink;
-    text-decoration-skip-ink: auto;
-}
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "pnum";
+  font-feature-settings: "pnum";
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
 
-.wrap {
-    max-width: 520px;
-    padding: 50px;
-    background: $white;
-    margin: 12px;
-}
+  > header {
+    padding: calc($padding * 2) $padding $padding $padding;
+    margin-bottom: $padding;
+    max-width: $maxWidth;
+    width: 100%;
+    margin: 0 auto;
 
-h1, h2 {
-    font-weight: 600;
-}
-
-h1 {
-    margin: 0;
-}
-
-h2 {
-    opacity: .7;
-    margin-top: .3em;
-    font-weight: 400;
-}
-
-a {
-    background-color: $valencia;
-    color: $white;
-    text-decoration: none;
-    padding: 1px;
-    font-weight: 700;
-    &:hover {
-        color: $valencia;
-        background-color: transparent;
-        text-decoration: underline;
+    a {
+      color: $oxford-blue;
+      border-bottom: 0;
+      display: inline-block;
     }
-}
 
-img {
-    width: 128px;
-    border-radius: 50%;
-    margin-bottom: 18px;
-}
+    h1 {
+      margin-bottom: calc($padding / 2);
+    }
 
-p:last-of-type {
-    margin-bottom: 0;
+    h2 {
+      margin-top: 0;
+      color: $oxford-blue;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+
+    img {
+      width: 128px;
+      border-radius: 50%;
+      overflow: hidden;
+      align-self: center;
+      flex: 0 0 auto;
+    }
+  }
+
+  .content {
+    flex: 1;
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 0 $padding;
+    line-height: 1.75;
+  }
+
+  > footer {
+    width: 100%;
+    padding: 0 $padding;
+    margin-top: $padding;
+    text-align: center;
+    background: $alablaster;
+
+    a {
+      border-bottom-color: $oxford-blue;
+      color: $oxford-blue;
+    }
+
+    .meta {
+      font-size: 12px;
+    }
+  }
+
+  a {
+    border-bottom: 2px solid $valencia;
+    text-decoration: none;
+    color: $valencia;
+    &:hover {
+      border-bottom: 0;
+      text-decoration: none;
+    }
+  }
 }
