@@ -37,7 +37,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addTransform('postcss', async (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.css')) {
       const processed = await postcss.process(content, {
-        from: ''
+        from: `${process.cwd()}/main.css`
       })
 
       return processed.css
