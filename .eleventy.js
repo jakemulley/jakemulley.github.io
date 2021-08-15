@@ -1,3 +1,4 @@
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const htmlmin = require('html-minifier')
 const postcss = require('postcss')([
   require('postcss-import'),
@@ -15,6 +16,18 @@ module.exports = (eleventyConfig) => {
   // Add shortcode to get the current time (useful for cachebusting)
   eleventyConfig.addShortcode('now', () => {
     return String(Date.now())
+  })
+
+  // Syntax highlighting
+  eleventyConfig.addPlugin(syntaxHighlight)
+
+  // Date filters
+  eleventyConfig.addFilter('humanDate', (date) => {
+    return new Date(date).toLocaleString('en-GB', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    })
   })
 
   // Passthrough CNAME
@@ -55,6 +68,7 @@ module.exports = (eleventyConfig) => {
     dir: {
       input: 'src',
       output: 'docs'
-    }
+    },
+    markdownTemplateEngine: 'njk'
   }
 }

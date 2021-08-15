@@ -20,6 +20,7 @@ body {
   font-feature-settings: "pnum";
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
+  color: $oxford-blue;
 
   > header {
     padding: calc($padding * 2) $padding $padding $padding;
@@ -88,5 +89,19 @@ body {
       border-bottom: 0;
       text-decoration: none;
     }
+  }
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a[href$="png"] {
+    border-bottom: 0;
+  }
+
+  img {
+    max-width: 100%;
   }
 }

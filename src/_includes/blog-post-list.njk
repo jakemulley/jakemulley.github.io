@@ -1,0 +1,8 @@
+<ol reversed>
+{% for post in collections.posts | reverse %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a> on
+    <time datetime="{{ post.date.toISOString() }}">{{ post.date | humanDate }}</time>
+  </li>
+{% endfor %}
+</ol>
