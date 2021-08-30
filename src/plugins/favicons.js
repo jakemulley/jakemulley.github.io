@@ -19,7 +19,7 @@ module.exports = (eleventyConfig, pluginOptions = {}) => {
   eleventyConfig.addPassthroughCopy({ [pluginOptions.input]: './favicon.svg' })
 
   // Create output directory
-  fs.mkdirSync(pluginOptions.output)
+  fs.mkdirSync(pluginOptions.output, { recursive: true })
 
   // Prepare SVG for different PNG sizes
   const image = sharp(pluginOptions.input)
