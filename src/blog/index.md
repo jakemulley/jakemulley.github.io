@@ -1,7 +1,6 @@
 ---
 layout: layouts/index.njk
-subtitle: Blog posts
-title: Jake Mulley
+title: Blog posts
 ---
 
 {% include "blog-post-list.njk" %}
