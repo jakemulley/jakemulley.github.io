@@ -1,6 +1,5 @@
 ---
 layout: layouts/index.njk
-subtitle: Jake Mulley
 title: Revealing any GitHub user's two-factor authentication settings
 tags: [ "posts" ]
 date: 2021-08-15

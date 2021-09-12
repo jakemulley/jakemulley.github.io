@@ -1,14 +1,13 @@
+{% set pageTitle = [ title, meta['site-title'] ] %}
 {% if page.url == "/" %}
-  {% set pageTitle = title + " | " + subtitle %}
-{% else %}
-  {% set pageTitle = subtitle + " | " + title %}
+  {% set pageTitle = pageTitle | reverse %}
 {% endif %}
 
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ pageTitle }}</title>
+  <title>{{ pageTitle | join(" | ") }}</title>
   <meta name="author" content="Jake Mulley">
   <meta name="description" content="Jake Mulley is Head of Hosting &amp; Digital Operations at Ministry of Justice, with 9 years experience across agencies, startups, the public sector, charities, and government organisations.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,9 +19,9 @@
   <header>
     <a href="/">
       <img alt="Jake Mulley's headshot" src="/images/profile.jpeg">
-      <h1>{{ title }}</h1>
+      <h1>{{ pageTitle | first }}</h1>
     </a>
-    <h2>{{ subtitle }}</h2>
+    <h2>{{ pageTitle | last }}</h2>
   </header>
   <main class="content">
     {% block content %}
