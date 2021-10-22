@@ -29,6 +29,6 @@
     "postcss-import": "^14.0.2",
     "precss": "^4.0.0",
     "prismjs": "^1.25.0",
-    "sharp": "^0.29.1"
+    "sharp": "^0.29.2"
   }
 }
