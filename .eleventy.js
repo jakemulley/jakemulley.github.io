@@ -24,6 +24,7 @@ module.exports = (eleventyConfig) => {
 
   // Passthroughs
   eleventyConfig.addPassthroughCopy('./src/CNAME')
+  eleventyConfig.addPassthroughCopy('./src/robots.txt')
   eleventyConfig.addPassthroughCopy({ './src/_assets/images': './images' })
 
   return {
