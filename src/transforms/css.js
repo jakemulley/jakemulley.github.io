@@ -15,13 +15,13 @@ if (process.env.ELEVENTY_ENV === 'production') {
 
 const postcss = require('postcss')(plugins)
 
-module.exports = async (content, outputPath) => {
-  if (outputPath && outputPath.endsWith('.css')) {
-    const processed = await postcss.process(content, {
-      from: `${process.cwd()}/main.css`
+module.exports = async function (content) {
+  if (this.outputPath && this.outputPath.endsWith('.css')) {
+    const output = await postcss.process(content, {
+      from: undefined
     })
 
-    return processed.css
+    return output.css
   }
 
   return content
