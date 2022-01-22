@@ -7,8 +7,8 @@
     "url": "git+https://github.com/jakemulley/jakemulley.github.io.git"
   },
   "scripts": {
-    "build": "rm -r ./docs/ && ELEVENTY_ENV=production npx eleventy",
-    "serve": "rm -r ./docs/ && ELEVENTY_ENV=development npx eleventy --serve"
+    "build": "ELEVENTY_ENV=production npx eleventy",
+    "serve": "ELEVENTY_ENV=development npx eleventy --serve"
   },
   "author": "Jake Mulley",
   "license": "MIT",
