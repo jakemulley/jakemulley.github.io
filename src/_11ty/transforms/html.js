@@ -1,12 +1,15 @@
-const htmlmin = require('html-minifier')
+const { minify } = require('html-minifier-terser')
+const pretty = require('pretty')
 
-module.exports = function (content) {
-  if (process.env.ELEVENTY_ENV === 'production' && this.outputPath && this.outputPath.endsWith('.html')) {
-    return htmlmin.minify(content, {
+module.exports = async function (content) {
+  if (this.outputPath.endsWith('.html')) {
+    const minifiedHtml = await minify(content, {
       useShortDoctype: true,
       removeComments: true,
       collapseWhitespace: true
     })
+
+    return pretty(minifiedHtml)
   }
 
   return content

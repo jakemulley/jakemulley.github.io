@@ -23,11 +23,12 @@
     "@shockpkg/icon-encoder": "^1.3.1",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.15",
-    "html-minifier": "^4.0.0",
+    "html-minifier-terser": "^7.0.0-alpha.1",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",
     "precss": "^4.0.0",
+    "pretty": "^2.0.0",
     "prismjs": "^1.26.0",
     "sharp": "^0.29.3"
   }
