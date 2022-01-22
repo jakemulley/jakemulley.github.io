@@ -1,36 +1,38 @@
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const favicons = require('./src/plugins/favicons')
+const { filters, plugins, shortcodes, transforms } = require('./src/_11ty')
 
-module.exports = (eleventyConfig) => {
-  // Watch targets
-  eleventyConfig.addWatchTarget('./src/_assets/css/')
-
-  // Plugins
-  eleventyConfig.addPlugin(syntaxHighlight)
-  eleventyConfig.addPlugin(favicons, {
-    input: './src/_assets/favicon.svg',
-    output: './docs'
-  })
-
-  // Filters
-  eleventyConfig.addFilter('humanDate', require('./src/filters/date'))
-
-  // Shortcodes
-  eleventyConfig.addShortcode('now', require('./src/shortcodes/now'))
-
-  // Transforms
-  eleventyConfig.addTransform('htmlmin', require('./src/transforms/html'))
-  eleventyConfig.addTransform('postcss', require('./src/transforms/css'))
-
+module.exports = eleventyConfig => {
   // Passthroughs
   eleventyConfig.addPassthroughCopy('./src/CNAME')
   eleventyConfig.addPassthroughCopy('./src/robots.txt')
   eleventyConfig.addPassthroughCopy({ './src/_assets/images': './images' })
 
+  // Watch targets
+  eleventyConfig.addWatchTarget('./src/_assets/css/')
+
+  // Filters
+  for (const name of Object.keys(filters)) {
+    eleventyConfig.addFilter(name, filters[name])
+  }
+
+  // Plugins
+  for (const name of Object.keys(plugins)) {
+    eleventyConfig.addPlugin(require(name), plugins[name])
+  }
+
+  // Shortcodes
+  for (const name of Object.keys(shortcodes)) {
+    eleventyConfig.addShortcode(name, shortcodes[name])
+  }
+
+  // Transforms
+  for (const name of Object.keys(transforms)) {
+    eleventyConfig.addTransform(name, transforms[name])
+  }
+
   return {
     dir: {
-      input: 'src',
-      output: 'docs'
+      input: './src',
+      output: './docs'
     },
     markdownTemplateEngine: 'njk'
   }
