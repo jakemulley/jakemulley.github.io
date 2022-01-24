@@ -22,7 +22,7 @@
     "@fullhuman/postcss-purgecss": "^4.1.3",
     "@shockpkg/icon-encoder": "^1.3.1",
     "autoprefixer": "^10.4.2",
-    "cssnano": "^5.0.15",
+    "cssnano": "^5.0.16",
     "html-minifier-terser": "^7.0.0-alpha.1",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.5",
