@@ -15,15 +15,15 @@
   {% favicons %}
   <meta name="theme-color" content="#DB3344">
 </head>
-<body>
-  <header>
-    <a href="/">
-      <img alt="Jake Mulley's headshot" src="/images/profile.jpeg">
-      <h1>{{ pageTitle | first }}</h1>
+<body class="flex flex-col min-h-screen antialiased text-oxford-blue bg-white">
+  <header class="mx-auto max-w-[520px] p-4 pt-8 w-full">
+    <a href="/" class="inline-block">
+      <img alt="Jake Mulley's headshot" src="/images/profile.jpeg" class="rounded-full overflow-hidden w-[128px]">
+      <h1 class="font-bold text-[2rem] mt-5">{{ pageTitle | first }}</h1>
     </a>
-    <h2>{{ pageTitle | last }}</h2>
+    <h2 class="mb-5 opacity-70 font-semibold text-2xl">{{ pageTitle | last }}</h2>
   </header>
-  <main class="content">
+  <main class="flex-grow leading-7 mx-auto p-4 w-full max-w-[520px] prose prose-oxford-blue prose-a:no-underline prose-a:border-b-2 prose-a:border-b-valencia prose-a:text-valencia prose-a:font-normal hover:prose-a:border-b-transparent">
     {% block content %}
     {% endblock %}
     {% if page.url !== "/" %}
@@ -32,9 +32,9 @@
       </nav>
     {% endif %}
   </main>
-  <footer>
-    <p>👋 Say hello: <a href="https://twitter.com/carboia">Twitter</a>, <a href="https://linkedin.com/in/jakemulley">LinkedIn</a>, <a href="https://github.com/jakemulley">GitHub</a>, <a href="mailto:me@jakemulley.com">e-mail</a></p>
-    <p class="meta">&copy; Jake Mulley</p>
+  <footer class="w-full bg-alablaster mt-4 px-4 py-3 text-center space-y-3">
+    <p>👋 Say hello: <a class="border-b-oxford-blue border-b-2 hover:border-b-transparent" href="https://twitter.com/carboia">Twitter</a>, <a class="border-b-oxford-blue border-b-2 hover:border-b-transparent" href="https://linkedin.com/in/jakemulley">LinkedIn</a>, <a class="border-b-oxford-blue border-b-2 hover:border-b-transparent" href="https://github.com/jakemulley">GitHub</a>, <a class="border-b-oxford-blue border-b-2 hover:border-b-transparent" href="mailto:me@jakemulley.com">e-mail</a></p>
+    <p class="text-xs">&copy; Jake Mulley</p>
   </footer>
   <script type="application/ld+json">
   {
