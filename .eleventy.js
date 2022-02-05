@@ -6,9 +6,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('./src/robots.txt')
   eleventyConfig.addPassthroughCopy({ './src/_assets/images': './images' })
 
-  // Watch targets
-  eleventyConfig.addWatchTarget('./src/_assets/css/')
-
   // Filters
   for (const name of Object.keys(filters)) {
     eleventyConfig.addFilter(name, filters[name])
