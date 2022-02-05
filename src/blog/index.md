@@ -1,5 +1,4 @@
 ---
-layout: layouts/index.njk
 title: Blog posts
 ---
 
