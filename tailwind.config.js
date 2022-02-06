@@ -6,8 +6,7 @@ module.exports = {
     extend: {
       colors: {
         alablaster: '#F9F9F9',
-        valencia: '#DB3344',
-        'oxford-blue': '#2B3B44'
+        valencia: '#DB3344'
       }
     }
   },
