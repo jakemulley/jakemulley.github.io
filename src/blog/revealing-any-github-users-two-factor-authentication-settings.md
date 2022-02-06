@@ -4,7 +4,7 @@ tags: [ "posts" ]
 date: 2021-08-15
 ---
 
-*This vulnerability was responsibly disclosed via [GitHub's bug bounty program](https://hackerone.com/github). As this is now resolved, GitHub are happy for me to disclose this publicly.*
+*This vulnerability was responsibly disclosed via [GitHub's bug bounty program](https://hackerone.com/github). As this is now resolved, GitHub is happy for me to disclose this publicly.*
 
 ## Summary
 
@@ -22,7 +22,7 @@ GitHub helps you do this by showing each organisation members 2FA status, like t
 
 <img src="/images/gh-vulnerability-2fa-enabled.png" srcset="/images/gh-vulnerability-2fa-enabled.png 2x" alt="A screenshot of a GitHub user panel, showing that I had two-factor security enabled whilst part of an organisation">
 
-Whilst this is appropriate and useful for within your own organisation, this is where the vulnerability lies: this particular page didn't check if you had permission to view 2FA details about the user you're viewing.
+Whilst this is appropriate and useful within your own organisation, this is where the vulnerability lies: this particular page didn't check if you had permission to view 2FA details about the user you're viewing.
 
 The URL of this page is:
 
@@ -30,7 +30,7 @@ The URL of this page is:
 https://github.com/enterprises/${enterpriseSlug}/outside_collaborator/${githubUsername}
 ```
 
-This vulnerability let you change `${githubUsername}` to any GitHub user to reveal their 2FA position. For example, the URL for _Fake Enterprise_ with a outside collaborator _jakemulley_ would be:
+This vulnerability lets you change `${githubUsername}` to any GitHub user to reveal their 2FA position. For example, the URL for _Fake Enterprise_ with a outside collaborator _jakemulley_ would be:
 
 ```bash
 https://github.com/enterprises/fake-enterprise/outside_collaborator/jakemulley
@@ -40,7 +40,7 @@ If I wasn't affiliated to the organisation and had 2FA off, it would show the fo
 
 <img src="/images/gh-vulnerability-2fa-disabled.png" srcset="/images/gh-vulnerability-2fa-disabled.png 2x" alt="A screenshot of a GitHub user panel, showing that I had two-factor security enabled whilst part of an organisation">
 
-I _responsibly_ validated this by using my [partners](http://thatscotdatasci.com) GitHub username, with his permission, as an example.
+I _responsibly_ validated this by using my [partner's](http://thatscotdatasci.com) GitHub username, with his permission, as an example.
 
 That's it - a rather simple vulnerability thanks to the beauty of guessable and hackable URLs 🤷
 
@@ -55,7 +55,7 @@ That's it - a rather simple vulnerability thanks to the beauty of guessable and 
 
 This was resolved rather quickly - from report to resolution, it was 6 days. That's pretty good.
 
-This was my first time reporting a vulnerability via HackerOne. I'm not a cyber-security expert, and I had no idea what [CVSS](https://en.wikipedia.org/wiki/Common_Vulnerability_Scoring_System) score I should have used for this. I didn't even know what weakness it was really. I initially disclosed it as severity: Low, and weakness: Information Disclosure.
+This was my first time reporting a vulnerability via HackerOne. I'm not a cyber-security expert, and I had no idea what [CVSS](https://en.wikipedia.org/wiki/Common_Vulnerability_Scoring_System) score I should have used for this. I didn't even know what weakness it really was. I initially disclosed it as severity: Low, and weakness: Information Disclosure.
 
 After validating the vulnerability, GitHub proactively changed the severity to Medium, and the weakness to Missing Function Level Access Control.
 
@@ -79,5 +79,5 @@ For me:
 
 - Free GitHub Pro ✅
 - Free GitHub swag ✅
-- A cool new GitHub badge ✅ (["Security Bug Bounty Hunter"](https://bounty.github.com))
+- A cool new GitHub badge ✅ ("[Security Bug Bounty Hunter](https://bounty.github.com)")
 - An undisclosed bounty 🤑
