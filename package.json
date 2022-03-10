@@ -23,7 +23,7 @@
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.1.1",
-    "html-minifier-terser": "^7.0.0-alpha.1",
+    "html-minifier-terser": "^7.0.0-alpha.2",
     "postcss": "^8.4.8",
     "postcss-import": "^14.0.2",
     "pretty": "^2.0.0",
