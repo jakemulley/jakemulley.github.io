@@ -24,7 +24,7 @@
     "autoprefixer": "^10.4.3",
     "cssnano": "^5.1.4",
     "html-minifier-terser": "^7.0.0-alpha.2",
-    "postcss": "^8.4.8",
+    "postcss": "^8.4.12",
     "postcss-import": "^14.0.2",
     "pretty": "^2.0.0",
     "prismjs": "^1.27.0",
