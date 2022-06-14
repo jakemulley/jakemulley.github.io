@@ -2,7 +2,7 @@ const plugins = [
   require('postcss-import'),
   require('tailwindcss'),
   require('autoprefixer'),
-  ...(process.env.ELEVENTY_ENV === 'production' ? [require('cssnano')] : [])
+  ...(process.env.NODE_ENV === 'production' ? [require('cssnano')] : [])
 ]
 
 const postcss = require('postcss')(plugins)
