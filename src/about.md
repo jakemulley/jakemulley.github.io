@@ -6,7 +6,7 @@ title: About me
 
 I have 10 years experience working within the public and private sectors, as well as with agencies, startups and charities.
 
-I'm currently **Head of Hosting & Digital Operations** at the UK government's [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice).
+I'm currently **Lead Technical Architect** at the UK government's [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice).
 
 Day to day, I regularly work on:
 
@@ -14,7 +14,6 @@ Day to day, I regularly work on:
 - Defining and building technical architecture, specialising in serverless
 - Building accessible services with progressive enhancement
 - Designing data-driven and domain-driven services
-- Managing a £multi-million budget, ~80 people, and ~30 contracts
 - Collaborating across stakeholders to get buy-in and define technical strategies
 
 To do this, I tend to utilise whatever is best for the job at hand, though I often use:
@@ -35,11 +34,17 @@ Some of my work is open source on [GitHub](https://github.com/jakemulley). You c
 
 ## Work experience
 
+### Lead Technical Architect at [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice)
+
+<span class="text-sm">_Apr 2022 &ndash; present_</span>
+
+I'm currently Lead Technical Architect within the Platforms and Architecture team.
+
 ### Head of Hosting & Digital Operations at [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice)
 
-<span class="text-sm">_Mar 2021 &ndash; present_</span>
+<span class="text-sm">_Mar 2021 &ndash; Apr 2022_</span>
 
-I currently work within the Platforms and Architecture team, leading five teams to transform how the Ministry of Justice hosts services, with a clear drive towards public cloud.
+I worked within the Platforms and Architecture team, leading five teams to transform how the Ministry of Justice hosts services, with a clear drive towards public cloud.
 
 The teams I lead are:
 
