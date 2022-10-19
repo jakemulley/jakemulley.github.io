@@ -19,7 +19,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
-    "@shockpkg/icon-encoder": "^2.1.1",
+    "@shockpkg/icon-encoder": "^2.1.2",
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.12",
     "cssnano": "^5.1.13",
