@@ -22,7 +22,7 @@
     "@shockpkg/icon-encoder": "^2.1.2",
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.13",
-    "cssnano": "^5.1.13",
+    "cssnano": "^5.1.14",
     "html-minifier-terser": "^7.0.0",
     "postcss": "^8.4.18",
     "postcss-import": "^15.0.0",
