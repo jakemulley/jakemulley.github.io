@@ -13,7 +13,6 @@ module.exports = {
     now: require('./shortcodes/now')
   },
   transforms: {
-    html: require('./transforms/html'),
-    css: require('./transforms/css')
+    html: require('./transforms/html')
   }
 }
