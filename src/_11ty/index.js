@@ -10,7 +10,8 @@ module.exports = {
     }
   },
   shortcodes: {
-    now: require('./shortcodes/now')
+    now: require('./shortcodes/now'),
+    icon: require('./shortcodes/icon')
   },
   transforms: {
     html: require('./transforms/html')
