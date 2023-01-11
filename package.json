@@ -24,7 +24,7 @@
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "@shockpkg/icon-encoder": "^2.1.3",
-    "@tailwindcss/typography": "^0.5.8",
+    "@tailwindcss/typography": "^0.5.9",
     "concurrently": "^7.6.0",
     "heroicons": "^2.0.13",
     "html-minifier-terser": "^7.1.0",
