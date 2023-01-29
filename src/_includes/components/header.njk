@@ -1,3 +1,5 @@
+<a href="#main" id="skip-link" class="absolute w-px h-px m-0 overflow-hidden whitespace-nowrap underline block focus:absolute focus:w-auto focus:h-auto focus:overflow-visible focus:z-10">Skip to main content</a>
+
 <header class="w-full py-4">
   <div class="max-w-xl mx-auto px-4 flex flex-row justify-between items-center">
     <a href="/">
@@ -6,15 +8,11 @@
     </a>
     <nav>
       <ul class="flex space-x-4">
-        <li>
-          <a href="/" class="p-1 underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">Home</a>
-        </li>
-        <li>
-          <a href="/about/" class="p-1 underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">About</a>
-        </li>
-        <li>
-          <a href="/blog/" class="p-1 underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">Blog</a>
-        </li>
+        {% for link in collections.all | eleventyNavigation %}
+          <li>
+            <a href="{{ link.url }}" class="p-1 underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">{{ link.title }}</a>
+          </li>
+        {% endfor %}
       </ul>
     </nav>
   </div>

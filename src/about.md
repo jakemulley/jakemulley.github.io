@@ -1,5 +1,9 @@
 ---
 title: About me
+eleventyNavigation:
+  key: about
+  title: About
+  order: 1
 ---
 
 👋 Hello! I'm Jake Mulley. I'm a hands-on technical leader, software engineer, and technical architect, all rolled into one.

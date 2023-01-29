@@ -48,8 +48,10 @@
     {% favicons %}
   </head>
   <body class="bg-white flex flex-col min-h-screen antialiased">
+
     {% include "components/header.njk" %}
-    <main class="w-full flex-grow">
+
+    <main id="main" tabindex="-1" class="w-full flex-grow">
       {% block content %}
       {% endblock %}
       {% if page.url !== "/" %}
@@ -60,7 +62,9 @@
         </nav>
       {% endif %}
     </main>
+
     {% include "components/footer.njk" %}
+
     <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
