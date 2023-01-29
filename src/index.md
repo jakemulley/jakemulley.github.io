@@ -1,5 +1,9 @@
 ---
 title: Jake Mulley
+eleventyNavigation:
+  key: home
+  title: Home
+  order: 0
 ---
 
 👋 I'm currently working in the [Platforms and Architecture](https://mojdigital.blog.gov.uk/) team at [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice) as **Lead Technical Architect**.

@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: {
     '@11ty/eleventy-plugin-syntaxhighlight': null,
+    '@11ty/eleventy-navigation': null,
     './src/_11ty/plugins/favicons': {
       input: './src/_assets/favicon.svg',
       output: './docs'
