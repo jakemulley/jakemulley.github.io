@@ -29,8 +29,8 @@
     <!-- Open Graph protocol (https://ogp.me) -->
     <meta property="og:title" content="{{ pageTitle }}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/images/profile.jpeg">
-    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:image" content="{{ meta['site-url'] }}/images/profile.jpeg">
+    <meta property="og:url" content="{{ meta['site-url'] }}{{ page.url }}">
     {% if description %}
       <meta property="og:description" content="{{ description }}">
     {% endif %}
@@ -42,7 +42,7 @@
     <meta name="twitter:site" content="{{ meta['site-twitter'] }}">
 
     <!-- Canonical links -->
-    <link rel="canonical" href="{{ page.url }}">
+    <link rel="canonical" href="{{ meta['site-url'] }}{{ page.url }}">
 
     <!-- Favicons -->
     {% favicons %}
