@@ -1,0 +1,8 @@
+<footer class="w-full bg-alablaster py-4 border-t">
+  <div class="max-w-xl mx-auto px-4 text-center space-y-4">
+    <p>👋 Say hello: {% for social in socials %}
+      <a class="underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white" href="{{ social.href }}" rel="me">{{ social.title }}</a>{% if not loop.last %}, {% endif %}{% if loop.revindex0 === 1 %} or {% endif %} {% endfor %}
+    </p>
+    <p class="text-xs">&copy; Jake Mulley</p>
+  </div>
+</footer>
