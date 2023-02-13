@@ -32,7 +32,7 @@
     "pretty": "^2.0.0",
     "prismjs": "^1.29.0",
     "sharp": "^0.31.3",
-    "simple-icons": "^8.4.0",
+    "simple-icons": "^8.5.0",
     "tailwindcss": "^3.2.4"
   },
   "browserslist": [
