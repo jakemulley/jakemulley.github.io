@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/jakemulley/jakemulley.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "@shockpkg/icon-encoder": "^2.1.3",
