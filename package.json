@@ -28,7 +28,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "concurrently": "^8.0.1",
     "heroicons": "^2.0.17",
-    "html-minifier-terser": "^7.1.0",
+    "html-minifier-terser": "^7.2.0",
     "pretty": "^2.0.0",
     "prismjs": "^1.29.0",
     "sharp": "^0.32.0",
