@@ -1,20 +1,41 @@
+const path = require('path')
+
 module.exports = {
-  filters: {
-    humanDate: require('./filters/date')
-  },
-  plugins: {
-    '@11ty/eleventy-plugin-syntaxhighlight': null,
-    '@11ty/eleventy-navigation': null,
-    './src/_11ty/plugins/favicons': {
-      input: './src/_assets/favicon.svg',
-      output: './docs'
+  filters: [
+    {
+      name: 'humanDate',
+      package: require('./filters/date')
     }
-  },
-  shortcodes: {
-    now: require('./shortcodes/now'),
-    icon: require('./shortcodes/icon')
-  },
-  transforms: {
-    html: require('./transforms/html')
-  }
+  ],
+  plugins: [
+    {
+      package: require('@11ty/eleventy-plugin-syntaxhighlight')
+    },
+    {
+      package: require('@11ty/eleventy-navigation')
+    },
+    {
+      package: require(path.resolve(process.cwd(), './src/_11ty/plugins/favicons')),
+      config: {
+        input: './src/_assets/favicon.svg',
+        output: './docs'
+      }
+    }
+  ],
+  shortcodes: [
+    {
+      name: 'now',
+      package: require('./shortcodes/now')
+    },
+    {
+      name: 'icon',
+      package: require('./shortcodes/icon')
+    }
+  ],
+  transforms: [
+    {
+      name: 'html',
+      package: require('./transforms/html')
+    }
+  ]
 }
