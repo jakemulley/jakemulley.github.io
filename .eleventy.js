@@ -12,23 +12,23 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy({ './src/_assets/images': './images' })
 
   // Filters
-  for (const name of Object.keys(filters)) {
-    eleventyConfig.addFilter(name, filters[name])
+  for (const filter of filters) {
+    eleventyConfig.addFilter(filter.name, filter.package)
   }
 
   // Plugins
-  for (const name of Object.keys(plugins)) {
-    eleventyConfig.addPlugin(require(name), plugins[name])
+  for (const plugin of plugins) {
+    eleventyConfig.addPlugin(plugin.package, (plugin.config || undefined))
   }
 
   // Shortcodes
-  for (const name of Object.keys(shortcodes)) {
-    eleventyConfig.addShortcode(name, shortcodes[name])
+  for (const shortcode of shortcodes) {
+    eleventyConfig.addShortcode(shortcode.name, shortcode.package)
   }
 
   // Transforms
-  for (const name of Object.keys(transforms)) {
-    eleventyConfig.addTransform(name, transforms[name])
+  for (const transform of transforms) {
+    eleventyConfig.addTransform(transform.name, transform.package)
   }
 
   return {
