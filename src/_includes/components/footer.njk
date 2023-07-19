@@ -1,16 +1,16 @@
-<footer class="w-full bg-alablaster text-slate-800 border-t py-4 md:py-8 lg:py-12 dark:bg-slate-800 dark:text-slate-200 dark:border-t-slate-900">
+<footer class="w-full bg-alablaster dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-t dark:border-t-slate-900 py-4 md:py-8 lg:py-12">
   <div class="max-w-xl mx-auto px-4 space-y-4 md:space-y-6 lg:space-y-8">
     <div class="space-y-1">
-      <h2 class="font-semibold font-serif text-2xl">Thanks for stopping by 🙌</h2>
-      <p>You're viewing <a href="{{ meta['site-url'] }}" class="underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">{{ meta['site-url'] | replace("https://", "") }}</a> at commit <span class="font-mono"><a href="https://github.com/jakemulley/jakemulley.github.io/commit/{{ info['hash'] }}" class="underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">{{ info['hash'] }}</a></span>.</p>
+      <h2 class="font-semibold font-serif text-2xl text-slate-900 dark:text-white">Thanks for stopping by 🙌</h2>
+      <p>You're viewing <a href="{{ meta['site-url'] }}" class="text-slate-900 dark:text-white underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">{{ meta['site-url'] | replace("https://", "") }}</a> at commit <span class="font-mono"><a href="https://github.com/jakemulley/jakemulley.github.io/commit/{{ info['hash'] }}" class="text-slate-900 dark:text-white underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">{{ info['hash'] }}</a></span>.</p>
     </div>
     <div class="space-y-1">
-      <p class="font-semibold font-serif text-lg">Say hello 👋</p>
+      <p class="font-semibold font-serif text-lg text-slate-900 dark:text-white">Say hello 👋</p>
       <ul class="flex flex-wrap">
         {% for social in socials %}
           <li>
             {% if loop.last %} or {% endif %}
-            <a href="{{ social.href }}" rel="me" class="underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">{{ social.title }}</a>
+            <a href="{{ social.href }}" rel="me" class="text-slate-900 dark:text-white underline decoration-valencia decoration-2 underline-offset-2 hover:bg-valencia hover:text-white">{{ social.title }}</a>
             {%- if loop.last == false %},&nbsp;{% endif %}
           </li>
         {% endfor %}
