@@ -8,9 +8,9 @@ eleventyNavigation:
 
 👋 Hello! I'm Jake Mulley. I'm a hands-on technical leader, software engineer, and technical architect, all rolled into one.
 
-I have 10 years experience working within the public and private sectors, as well as with agencies, startups and charities.
+I have 11 years experience working within the public and private sectors, as well as with agencies, startups and charities.
 
-I'm currently **Lead Technical Architect** at the UK government's [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice).
+I'm currently a **Principal Technical Architect** at the UK government's [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice).
 
 Day to day, I regularly work on:
 
@@ -38,11 +38,17 @@ Some of my work is open source on [GitHub](https://github.com/jakemulley). You c
 
 ## Work experience
 
+### Principal Technical Architect at [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice)
+
+<span class="text-sm">_Oct 2023 &ndash; present_</span>
+
+I'm currently a Principal Technical Architect within the Platforms and Architecture team, focussing on cloud hosting, DevOps &amp; platform engineering.
+
 ### Lead Technical Architect at [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice)
 
-<span class="text-sm">_Apr 2022 &ndash; present_</span>
+<span class="text-sm">_Apr 2022 &ndash; Oct 2023_</span>
 
-I'm currently Lead Technical Architect within the Platforms and Architecture team.
+I was Lead Technical Architect within the Platforms and Architecture team.
 
 ### Head of Hosting & Digital Operations at [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice)
 
