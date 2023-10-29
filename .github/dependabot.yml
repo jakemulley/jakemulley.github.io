@@ -3,12 +3,20 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     reviewers:
       - "jakemulley"
+    groups:
+      npm:
+        patterns:
+          - "*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     reviewers:
       - "jakemulley"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
