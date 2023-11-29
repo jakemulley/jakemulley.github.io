@@ -1,18 +1,18 @@
 {
   "name": "jakemulley.github.io",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A static site for jakemulley.com",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jakemulley/jakemulley.github.io.git"
   },
   "scripts": {
-    "dev:css": "npx tailwindcss -i ./src/_assets/css/main.css -o ./docs/css/main.css --watch",
-    "dev:html": "npx @11ty/eleventy --serve",
-    "dev": "concurrently npm:dev:*",
-    "build:css": "npx tailwindcss -i ./src/_assets/css/main.css -o ./docs/css/main.css --minify",
-    "build:html": "npx @11ty/eleventy",
-    "build": "concurrently npm:build:*"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "author": "Jake Mulley",
   "license": "MIT",
@@ -20,22 +20,17 @@
     "url": "https://github.com/jakemulley/jakemulley.github.io/issues"
   },
   "homepage": "https://github.com/jakemulley/jakemulley.github.io#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@shockpkg/icon-encoder": "^3.1.2",
+  "dependencies": {
+    "@astrojs/mdx": "^1.1.5",
+    "@astrojs/sitemap": "^3.0.3",
+    "@astrojs/tailwind": "^5.0.2",
     "@tailwindcss/typography": "^0.5.10",
-    "concurrently": "^8.2.2",
-    "heroicons": "^2.0.18",
-    "html-minifier-terser": "^7.2.0",
-    "pretty": "^2.0.0",
-    "prismjs": "^1.29.0",
-    "sharp": "^0.32.6",
-    "simple-icons": "^10.0.0",
+    "astro": "^3.6.3",
+    "astro-compress": "^2.2.3",
     "tailwindcss": "^3.3.5"
   },
-  "browserslist": [
-    "defaults"
-  ]
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "prettier-plugin-astro": "^0.12.2"
+  }
 }

@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+---
+<ol reversed>
+  {
+    allPosts.map((post) => (
+      <li>
+        <a href={`/blog/${post.slug}/`}>{post.data.title}</a> on
+        <time datetime={post.data.date.toISOString()} class="font-serif">{post.data.date.toLocaleString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+      </li>
+    ))
+  }
+</ol>
