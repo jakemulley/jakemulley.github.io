@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/jakemulley/jakemulley.github.io#readme",
   "dependencies": {
-    "@astrojs/mdx": "^2.0.1",
+    "@astrojs/mdx": "^2.0.2",
     "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/tailwind": "^5.0.3",
+    "@astrojs/tailwind": "^5.0.4",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^4.0.6",
+    "astro": "^4.0.7",
     "astro-compress": "^2.2.5",
-    "tailwindcss": "^3.3.6"
+    "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
