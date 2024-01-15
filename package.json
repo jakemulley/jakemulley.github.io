@@ -22,19 +22,19 @@
   },
   "homepage": "https://github.com/jakemulley/jakemulley.github.io#readme",
   "dependencies": {
-    "@astrojs/mdx": "^2.0.2",
-    "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/tailwind": "^5.0.4",
+    "@astrojs/mdx": "^2.0.4",
+    "@astrojs/sitemap": "^3.0.4",
+    "@astrojs/tailwind": "^5.1.0",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^4.0.7",
-    "astro-compress": "^2.2.5",
-    "tailwindcss": "^3.4.0"
+    "astro": "^4.1.2",
+    "astro-compress": "^2.2.8",
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^0.31.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
-    "prettier": "^3.1.1",
-    "prettier-plugin-astro": "^0.12.2"
+    "prettier": "^3.2.2",
+    "prettier-plugin-astro": "^0.12.3"
   }
 }
