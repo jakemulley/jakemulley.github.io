@@ -1,77 +1,99 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import site from '../data/site.json';
+import site from "../data/site.json";
 
 const { title, description } = Astro.props;
 const url = Astro.url.pathname;
 ---
+
 <!doctype html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     {
-      title === site['site-title'] ?
-      <title>{ site['site-title'] }</title> :
-      <title>{ [ title, site['site-title'] ].join(" | ") }</title>
+      title === site["site-title"] ? (
+        <title>{site["site-title"]}</title>
+      ) : (
+        <title>{[title, site["site-title"]].join(" | ")}</title>
+      )
     }
 
-    <meta name="author" content={site['site-author']}>
+    <meta name="author" content={site["site-author"]} />
 
     {
-      description ?
-      <meta name="description" content={ description }> :
-      <meta name="description" content={ site['site-description'] }>
+      description ? (
+        <meta name="description" content={description} />
+      ) : (
+        <meta name="description" content={site["site-description"]} />
+      )
     }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- SEO -->
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow" />
 
     <!-- Open Graph protocol (https://ogp.me) -->
     {
-      title === site['site-title'] ?
-      <meta property="og:title" content={ site['site-title'] }> :
-      <meta property="og:title" content={ [ title, site['site-title'] ].join(" | ") }>
+      title === site["site-title"] ? (
+        <meta property="og:title" content={site["site-title"]} />
+      ) : (
+        <meta
+          property="og:title"
+          content={[title, site["site-title"]].join(" | ")}
+        />
+      )
     }
-    <meta property="og:type" content="website">
-    <meta property="og:image" content={`${site['site-url']}/images/profile.jpeg`}>
-    <meta property="og:url" content={`${site['site-url']}${url}`}>
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content={`${site["site-url"]}/images/profile.jpeg`}
+    />
+    <meta property="og:url" content={`${site["site-url"]}${url}`} />
     {
-      description ?
-      <meta property="og:description" content={ description }> :
-      <meta property="og:description" content={ site['site-description'] }>
+      description ? (
+        <meta property="og:description" content={description} />
+      ) : (
+        <meta property="og:description" content={site["site-description"]} />
+      )
     }
-    <meta property="og:locale" content="en">
-    <meta property="og:site_name" content={site['site-title']}>
+    <meta property="og:locale" content="en" />
+    <meta property="og:site_name" content={site["site-title"]} />
 
     <!-- Twitter Card (https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started) -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content={ site['site-twitter'] }>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content={site["site-twitter"]} />
 
     <!-- Canonical links -->
-    <link rel="canonical" href={`${site['site-url']}${url}`}>
+    <link rel="canonical" href={`${site["site-url"]}${url}`} />
 
     <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
   </head>
   <body class="bg-white flex flex-col min-h-screen antialiased">
-
     <Header />
 
     <main id="main" tabindex="-1" class="w-full flex-grow">
-			<slot />
+      <slot />
       {
-        url === "/" ? "" :
-        (
+        url === "/" ? (
+          ""
+        ) : (
           <nav>
             <div class="max-w-xl mx-auto px-4 pb-12">
-              <p><a href="/" class="underline text-valencia decoration-2 underline-offset-2 hover:no-underline">&larr; Back home</a></p>
+              <p>
+                <a
+                  href="/"
+                  class="underline text-valencia decoration-2 underline-offset-2 hover:no-underline"
+                >
+                  &larr; Back home
+                </a>
+              </p>
             </div>
           </nav>
         )
@@ -81,25 +103,25 @@ const url = Astro.url.pathname;
     <Footer />
 
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org/",
-      "@type": "Person",
-      "name": "Jake Mulley",
-      "url": "https://jakemulley.com/",
-      "image": "https://jakemulley.com/images/profile.jpeg",
-      "email": "mailto:me@jakemulley.com",
-      "sameAs": [
-        "https://twitter.com/carboia",
-        "https://linkedin.com/in/jakemulley",
-        "https://github.com/jakemulley"
-      ],
-      "jobTitle": "Principal Technical Architect",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Ministry of Justice",
-        "sameAs": "https://www.gov.uk/government/organisations/ministry-of-justice"
+      {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Jake Mulley",
+        "url": "https://jakemulley.com/",
+        "image": "https://jakemulley.com/images/profile.jpeg",
+        "email": "mailto:me@jakemulley.com",
+        "sameAs": [
+          "https://twitter.com/carboia",
+          "https://linkedin.com/in/jakemulley",
+          "https://github.com/jakemulley"
+        ],
+        "jobTitle": "Principal Technical Architect",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Ministry of Justice",
+          "sameAs": "https://www.gov.uk/government/organisations/ministry-of-justice"
+        }
       }
-    }
     </script>
   </body>
 </html>
