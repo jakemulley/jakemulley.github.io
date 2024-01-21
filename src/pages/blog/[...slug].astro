@@ -4,13 +4,14 @@ import PageLayout from "../../layouts/Page.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry }
-  }))
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render()
+const { Content } = await entry.render();
 ---
 
 <PageLayout frontmatter={entry.data}>

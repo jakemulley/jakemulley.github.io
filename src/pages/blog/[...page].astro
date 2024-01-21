@@ -5,14 +5,15 @@ import BlogPostList from "../../components/BlogPostList.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry }
-  }))
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
 const frontmatter = {
-  title: "Blog posts"
-}
+  title: "Blog posts",
+};
 ---
 
 <PageLayout frontmatter={frontmatter}>
