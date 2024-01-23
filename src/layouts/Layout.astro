@@ -15,9 +15,9 @@ const url = Astro.url.pathname;
 
     {
       url === "/" ? (
-        <title>{site["site-title"]}</title>
+        <title set:html={site["site-title"]} />
       ) : (
-        <title>{[title, site["site-title"]].join(" | ")}</title>
+        <title set:html={[title, site["site-title"]].join(" | ")} />
       )
     }
 
