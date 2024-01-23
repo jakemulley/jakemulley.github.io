@@ -3,33 +3,33 @@ title: About me
 layout: "../layouts/Page.astro"
 ---
 
-👋 Hello! I'm Jake Mulley. I'm a hands-on technical leader, software engineer, and technical architect, all rolled into one.
+👋 Hello! I'm Jake Mulley. I'm a hands-on technical lead, software engineer, and technical architect.
 
-I have 11 years experience working within the public and private sectors, as well as with agencies, startups and charities.
+I have over 11 years experience working within the public and private sectors, as well as with agencies, startups and charities.
 
 I'm currently a **Principal Technical Architect** at the UK government's [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice).
 
 Day to day, I regularly work on:
 
-- Modernising legacy products, services, and infrastructure
-- Defining and building technical architecture, specialising in serverless
-- Building accessible services with progressive enhancement
-- Designing data-driven and domain-driven services
-- Collaborating across stakeholders to get buy-in and define technical strategies
+- modernising legacy products, services, and infrastructure
+- defining and building technical architecture, specialising in cloud-native technology and serverless
+- building accessible, progessively-enhanced services
+- designing data-driven and domain-driven services
+- collaborating across stakeholders at all levels to gain buy-in and define technical strategies
 
 To do this, I tend to utilise whatever is best for the job at hand, though I often use:
 
-| Purpose              | Thing                                                                                                                                                                                                      |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cloud infrastructure | Providers: <ul><li>Amazon Web Services</li><li>Microsoft Azure</li></ul> Configuration-as-code: <ul><li>Infrastructure: Terraform, CloudFormation</li><li>Machine configuration: Ansible, Packer</li></ul> |
-| Backend development  | Node, Python, Ruby, Rails, PHP, Laravel, Lumen, Go                                                                                                                                                         |
-| Frontend development | Vanilla HTML, CSS, JavaScript and flavours: <ul><li>HTML: Nunjucks, Pug, Moustache, Handlebars</li><li>CSS: Sass, SCSS, LESS, Tailwind</li><li>JavaScript: Angular, React, Alpine</li></ul>                |
-| General scripting    | Node, JavaScript, `sh` and `zsh`, Go                                                                                                                                                                       |
-| CI/CD pipelines      | GitHub Actions, Circle, Jenkins, GoCD                                                                                                                                                                      |
-| Issue tracking       | Jira, GitHub Projects                                                                                                                                                                                      |
-| Version control      | Git (inc. GitHub, GitLab, BitBucket)                                                                                                                                                                       |
+| Purpose              | Thing                                                                                                                                                                                                                                    |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cloud infrastructure | Providers: <ul><li>Amazon Web Services</li><li>Microsoft Azure</li><li>Google Cloud Platform</li></ul> Configuration-as-code: <ul><li>Infrastructure: Terraform, CloudFormation</li><li>Machine configuration: Ansible, Packer</li></ul> |
+| Backend development  | Node, Python, Ruby, Rails, PHP, Laravel, Lumen, Go                                                                                                                                                                                       |
+| Frontend development | Vanilla HTML, CSS, JavaScript and flavours: <ul><li>HTML: Nunjucks, Pug, Moustache, Handlebars</li><li>CSS: Sass, SCSS, LESS, TailwindCSS</li><li>JavaScript: Angular, React, Alpine, JSX, HTMX</li></ul>                                |
+| General scripting    | Node, JavaScript, `sh` and `zsh`, Go                                                                                                                                                                                                     |
+| CI/CD pipelines      | GitHub Actions, CircleCI, Concourse, Jenkins, GoCD                                                                                                                                                                                       |
+| Issue tracking       | Jira, GitHub Projects                                                                                                                                                                                                                    |
+| Version control      | Git (inc. GitHub, GitLab, BitBucket)                                                                                                                                                                                                     |
 
-Some of my work is open source on [GitHub](https://github.com/jakemulley). You can also find me on [Twitter](https://twitter.com/carboia), [LinkedIn](https://linkedin.com/in/jakemulley), or you can [email me](mailto:me@jakemulley.com).
+Some of my work is open source on [GitHub](https://github.com/jakemulley).
 
 ---
 
@@ -53,7 +53,7 @@ I was Lead Technical Architect within the Platforms and Architecture team.
 
 I worked within the Platforms and Architecture team, leading five teams to transform how the Ministry of Justice hosts services, with a clear drive towards public cloud.
 
-The teams I lead are:
+The teams I led were:
 
 - [Cloud Platform](https://user-guide.cloud-platform.service.justice.gov.uk/#cloud-platform-user-guide), who run a cloud-native hosting platform for modern services
 - [Modernisation Platform](https://user-guide.modernisation-platform.service.justice.gov.uk/#modernisation-platform), who run a cloud-first hosting platform for older, legacy services
@@ -67,7 +67,7 @@ The teams I lead are:
 
 Prior to becoming Head of Hosting & Digital Operations, I was Technical Architect for the [Modernisation Platform](https://user-guide.modernisation-platform.service.justice.gov.uk/#modernisation-platform).
 
-The Modernisation Platform vision is:
+The Modernisation Platform vision was:
 
 > a single platform which allows the Ministry of Justice to modernise services, and run them in a unified, scalable way
 
@@ -78,7 +78,7 @@ I led a multi-disciplinary team and built a platform that:
 - enforced CI/CD for infrastructure configuration and deployment
 - started to automate networking configuration to centralise networking management for legacy services
 
-I also started to [centralise and maintain best practises within the Ministry of Justice's AWS estate](https://github.com/ministryofjustice/aws-root-account), including introducing:
+I also began [centralising and maintaining best practises within the Ministry of Justice's AWS estate](https://github.com/ministryofjustice/aws-root-account), including introducing:
 
 - AWS SSO for authentication into AWS accounts
 - centralised security services and monitoring
