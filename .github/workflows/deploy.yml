@@ -24,7 +24,7 @@ jobs:
       - uses: withastro/action@v1
         with:
           node-version: 20
-      - run: npm run lint
+      - run: npm run ci
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
     needs: build

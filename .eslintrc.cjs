@@ -3,7 +3,11 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["eslint:recommended", "plugin:astro/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:astro/recommended",
+    "plugin:astro/jsx-a11y-strict",
+  ],
   overrides: [
     {
       env: {
