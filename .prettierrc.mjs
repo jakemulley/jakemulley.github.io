@@ -1,6 +1,20 @@
-/** @type {import("prettier").Config} */
+/**
+ * @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions &
+ *       import("@ianvs/prettier-plugin-sort-imports").PluginConfig}
+ */
 export default {
-  plugins: ["prettier-plugin-astro"],
+  arrowParens: "always",
+  printWidth: 80,
+  singleQuote: false,
+  jsxSingleQuote: false,
+  semi: true,
+  trailingComma: "all",
+  tabWidth: 2,
+  plugins: [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss",
+  ],
   overrides: [
     {
       files: "*.astro",
@@ -9,4 +23,6 @@ export default {
       },
     },
   ],
+  astroAllowShorthand: false,
+  tailwindConfig: "./tailwind.config.mjs",
 };

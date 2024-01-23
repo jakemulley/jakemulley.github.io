@@ -1,7 +1,7 @@
 ---
+import BlogPostList from "../components/BlogPostList.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import BlogPostList from "../components/BlogPostList.astro";
 import site from "../data/site.json";
 
 const { title, description } = Astro.props;
@@ -76,17 +76,17 @@ const url = Astro.url.pathname;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
   </head>
-  <body class="antialiased bg-white dark:bg-slate-900">
+  <body class="bg-white antialiased dark:bg-slate-900">
     <a
       href="#main"
       id="skip-link"
-      class="absolute w-px h-px m-0 overflow-hidden whitespace-nowrap underline block focus:absolute focus:w-auto focus:h-auto focus:overflow-visible focus:z-10"
+      class="absolute m-0 block h-px w-px overflow-hidden whitespace-nowrap underline focus:absolute focus:z-10 focus:h-auto focus:w-auto focus:overflow-visible"
       >Skip to main content</a
     >
 
-    <div class="max-w-2xl mx-auto p-8">
+    <div class="mx-auto max-w-2xl p-8">
       <div
-        class="max-w-none prose prose-slate dark:prose-invert lg:prose-lg prose-a:underline prose-a:decoration-valencia-500 prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:bg-valencia-500 hover:prose-a:text-white prose-a:border-2 prose-a:border-transparent hover:prose-a:border-valencia-500 prose-img:rounded-md lg:prose-img:rounded-lg"
+        class="prose prose-slate max-w-none lg:prose-lg dark:prose-invert prose-a:border-2 prose-a:border-transparent prose-a:underline prose-a:decoration-valencia-500 prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:border-valencia-500 hover:prose-a:bg-valencia-500 hover:prose-a:text-white prose-img:rounded-md lg:prose-img:rounded-lg"
       >
         <Header />
         <main id="main" tabindex="-1">
