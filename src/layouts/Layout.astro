@@ -75,32 +75,37 @@ const url = Astro.url.pathname;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
   </head>
-  <body class="bg-white flex flex-col min-h-screen antialiased">
-    <Header />
+  <body class="antialiased bg-white dark:bg-slate-900">
+    <a
+      href="#main"
+      id="skip-link"
+      class="absolute w-px h-px m-0 overflow-hidden whitespace-nowrap underline block focus:absolute focus:w-auto focus:h-auto focus:overflow-visible focus:z-10"
+      >Skip to main content</a
+    >
 
-    <main id="main" tabindex="-1" class="w-full flex-grow">
-      <slot />
-      {
-        url === "/" ? (
-          ""
-        ) : (
-          <nav>
-            <div class="max-w-xl mx-auto px-4 pb-12">
-              <p>
-                <a
-                  href="/"
-                  class="underline text-valencia decoration-2 underline-offset-2 hover:no-underline"
-                >
-                  &larr; Back home
-                </a>
-              </p>
-            </div>
-          </nav>
-        )
-      }
-    </main>
-
-    <Footer />
+    <div class="max-w-2xl mx-auto p-8">
+      <div
+        class="max-w-none prose prose-slate dark:prose-invert lg:prose-lg prose-a:text-valencia-500 dark:prose-a:text-valencia-400 prose-a:no-underline prose-a:underline-offset-2 prose-a:decoration-2 hover:prose-a:underline"
+      >
+        <Header />
+        <main id="main" tabindex="-1">
+          <slot />
+          {
+            url === "/" ? (
+              ""
+            ) : (
+              <>
+                <hr />
+                <nav>
+                  <a href="/">&larr; Back home</a>
+                </nav>
+              </>
+            )
+          }
+        </main>
+        <Footer />
+      </div>
+    </div>
 
     <script type="application/ld+json">
       {
