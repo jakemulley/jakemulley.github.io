@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
 <Layout title={frontmatter.title}>
   <article>
     <header>
-      <h1>{frontmatter.title}</h1>
+      <h1 set:html={frontmatter.title} />
       {
         !frontmatter.date ? (
           ""

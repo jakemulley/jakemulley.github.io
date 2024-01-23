@@ -13,7 +13,7 @@ const url = Astro.url.pathname;
     <meta charset="utf-8" />
 
     {
-      title === site["site-title"] ? (
+      url === "/" ? (
         <title>{site["site-title"]}</title>
       ) : (
         <title>{[title, site["site-title"]].join(" | ")}</title>
@@ -37,7 +37,7 @@ const url = Astro.url.pathname;
 
     <!-- Open Graph protocol (https://ogp.me) -->
     {
-      title === site["site-title"] ? (
+      url === "/" ? (
         <meta property="og:title" content={site["site-title"]} />
       ) : (
         <meta
