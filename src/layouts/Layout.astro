@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import BlogPostList from "../components/BlogPostList.astro";
 import site from "../data/site.json";
 
 const { title, description } = Astro.props;
@@ -92,7 +93,10 @@ const url = Astro.url.pathname;
           <slot />
           {
             url === "/" ? (
-              ""
+              <>
+                <h2>📝 Blog posts</h2>
+                <BlogPostList />
+              </>
             ) : (
               <>
                 <hr />
