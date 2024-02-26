@@ -26,18 +26,18 @@
   },
   "homepage": "https://github.com/jakemulley/jakemulley.github.io#readme",
   "dependencies": {
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^5.1.0",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^4.2.6",
+    "astro": "^4.4.4",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
-    "eslint": "^8.56.0",
-    "eslint-plugin-astro": "^0.31.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-jsx-a11y": "^6.8.0",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.11"
   }
