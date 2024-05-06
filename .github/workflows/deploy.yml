@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
-      - uses: actions/configure-pages@v4
+      - uses: actions/configure-pages@v5
         id: pages
       - run: npm ci
       - run: npm run ci
