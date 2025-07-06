@@ -3,8 +3,8 @@ title: 👋 Hello! I'm <a href="/" class="font-bold">Jake Mulley</a>.
 layout: "../layouts/Page.astro"
 ---
 
-I'm currently working as a **[Principal Technical Architect](https://ddat-capability-framework.service.gov.uk/technical-architect.html#principal-technical-architect)** at the UK government's [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice).
+I'm currently a **Principal Cloud Engineer** at [PhysicsX](https://www.physicsx.ai), a [series B startup](https://www.physicsx.ai/newsroom/physicsx-raises-135m-series-b-to-usher-in-a-new-era-of-ai-native-engineering-and-manufacturing) that is accelerating industrial innovation with AI.
 
-Before joining the Ministry of Justice, I spent 8 years as a software engineer in other public sector organisations, software-as-a-service companies, digital agencies, and more.
+Before joining PhysicsX in February 2024, I spent 12 years as a platform engineer and technical architect in UK government, and as a full-stack engineer at software-as-a-service companies, digital agencies, and more.
 
 [Read more about me &rarr;](/about)
