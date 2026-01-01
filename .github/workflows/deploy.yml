@@ -28,7 +28,7 @@ jobs:
       - run: npm run ci
   deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: ${{ github.ref == 'refs/heads/main' }}
     needs: build
     environment:
       name: github-pages
