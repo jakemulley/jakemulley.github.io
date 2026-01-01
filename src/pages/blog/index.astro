@@ -1,0 +1,12 @@
+---
+import BlogPostList from '../../components/BlogPostList.astro';
+import PageLayout from '../../layouts/Page.astro';
+
+const frontmatter = {
+  title: 'Blog posts',
+};
+---
+
+<PageLayout {frontmatter}>
+  <BlogPostList />
+</PageLayout>

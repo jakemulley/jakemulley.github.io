@@ -8,7 +8,7 @@ const allPosts = await getCollection('blog');
   {
     allPosts.map((post) => (
       <li>
-        <a href={`/blog/${post.slug}/`}>{post.data.title}</a> on
+        <a href={`/blog/${post.id}/`}>{post.data.title}</a> on
         <time datetime={post.data.date.toISOString()}>
           {post.data.date.toLocaleString('en-GB', {
             year: 'numeric',
