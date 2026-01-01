@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-valencia-50: #f7cfd3;
+  --color-valencia-100: #f3bec3;
+  --color-valencia-200: #ed9ba3;
+  --color-valencia-300: #e77884;
+  --color-valencia-400: #e15664;
+  --color-valencia-500: #db3344;
+  --color-valencia-600: #b6202f;
+  --color-valencia-700: #861823;
+  --color-valencia-800: #560f16;
+  --color-valencia-900: #27070a;
+  --color-valencia-950: #0f0304;
+  --color-valencia: #db3344;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
