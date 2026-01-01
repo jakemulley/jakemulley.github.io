@@ -1,28 +1,25 @@
 /**
- * @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions &
- *       import("@ianvs/prettier-plugin-sort-imports").PluginConfig}
+ * @see https://prettier.io/docs/configuration
+ * @type {import("prettier").Config}
  */
-export default {
-  arrowParens: "always",
-  printWidth: 80,
-  singleQuote: false,
-  jsxSingleQuote: false,
+const config = {
+  useTabs: false,
+  singleQuote: true,
   semi: true,
-  trailingComma: "all",
-  tabWidth: 2,
   plugins: [
-    "@ianvs/prettier-plugin-sort-imports",
-    "prettier-plugin-astro",
-    "prettier-plugin-tailwindcss",
+    '@ianvs/prettier-plugin-sort-imports',
+    'prettier-plugin-astro',
+    'prettier-plugin-tailwindcss',
   ],
   overrides: [
     {
-      files: "*.astro",
+      files: '*.astro',
       options: {
-        parser: "astro",
+        parser: 'astro',
       },
     },
   ],
-  astroAllowShorthand: false,
-  tailwindConfig: "./tailwind.config.mjs",
+  tailwindConfig: './tailwind.config.mjs',
 };
+
+export default config;

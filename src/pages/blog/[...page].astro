@@ -1,10 +1,10 @@
 ---
-import { getCollection } from "astro:content";
-import BlogPostList from "../../components/BlogPostList.astro";
-import PageLayout from "../../layouts/Page.astro";
+import { getCollection } from 'astro:content';
+import BlogPostList from '../../components/BlogPostList.astro';
+import PageLayout from '../../layouts/Page.astro';
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
+  const blogEntries = await getCollection('blog');
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const frontmatter = {
-  title: "Blog posts",
+  title: 'Blog posts',
 };
 ---
 

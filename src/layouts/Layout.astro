@@ -1,8 +1,8 @@
 ---
-import BlogPostList from "../components/BlogPostList.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import site from "../data/site.json";
+import BlogPostList from '../components/BlogPostList.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import site from '../data/site.json';
 
 const { title, description } = Astro.props;
 const url = Astro.url.pathname;
@@ -14,20 +14,20 @@ const url = Astro.url.pathname;
     <meta charset="utf-8" />
 
     {
-      url === "/" ? (
-        <title set:html={site["site-title"]} />
+      url === '/' ? (
+        <title set:html={site['site-title']} />
       ) : (
-        <title set:html={[title, site["site-title"]].join(" | ")} />
+        <title set:html={[title, site['site-title']].join(' | ')} />
       )
     }
 
-    <meta name="author" content={site["site-author"]} />
+    <meta name="author" content={site['site-author']} />
 
     {
       description ? (
         <meta name="description" content={description} />
       ) : (
-        <meta name="description" content={site["site-description"]} />
+        <meta name="description" content={site['site-description']} />
       )
     }
 
@@ -38,37 +38,37 @@ const url = Astro.url.pathname;
 
     <!-- Open Graph protocol (https://ogp.me) -->
     {
-      url === "/" ? (
-        <meta property="og:title" content={site["site-title"]} />
+      url === '/' ? (
+        <meta property="og:title" content={site['site-title']} />
       ) : (
         <meta
           property="og:title"
-          content={[title, site["site-title"]].join(" | ")}
+          content={[title, site['site-title']].join(' | ')}
         />
       )
     }
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content={`${site["site-url"]}/images/profile.jpeg`}
+      content={`${site['site-url']}/images/profile.jpeg`}
     />
-    <meta property="og:url" content={`${site["site-url"]}${url}`} />
+    <meta property="og:url" content={`${site['site-url']}${url}`} />
     {
       description ? (
         <meta property="og:description" content={description} />
       ) : (
-        <meta property="og:description" content={site["site-description"]} />
+        <meta property="og:description" content={site['site-description']} />
       )
     }
     <meta property="og:locale" content="en" />
-    <meta property="og:site_name" content={site["site-title"]} />
+    <meta property="og:site_name" content={site['site-title']} />
 
     <!-- Twitter Card (https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started) -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content={site["site-twitter"]} />
+    <meta name="twitter:site" content={site['site-twitter']} />
 
     <!-- Canonical links -->
-    <link rel="canonical" href={`${site["site-url"]}${url}`} />
+    <link rel="canonical" href={`${site['site-url']}${url}`} />
 
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -92,7 +92,7 @@ const url = Astro.url.pathname;
         <main id="main" tabindex="-1">
           <slot />
           {
-            url === "/" ? (
+            url === '/' ? (
               <>
                 <h2>📝 Blog posts</h2>
                 <BlogPostList />

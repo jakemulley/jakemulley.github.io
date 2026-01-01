@@ -1,6 +1,6 @@
 ---
 title: About me
-layout: "../layouts/Page.astro"
+layout: '../layouts/Page.astro'
 ---
 
 👋 Hello! I'm Jake Mulley. I'm a hands-on technical leader, software engineer, and technical architect.

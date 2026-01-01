@@ -1,21 +1,21 @@
 ---
-import site from "../data/site.json";
-import socials from "../data/socials.json";
-import { commitHash } from "../utils/helpers.js";
+import site from '../data/site.json';
+import socials from '../data/socials.json';
+import { commitHash } from '../utils/helpers.js';
 
 const socialLinks = socials.map(
   (item) => `<a href="${item.href}">${item.title}</a>`,
 );
 
-const socialParagraph = `You can also find me on ${socialLinks.slice(0, -1).join(", ")}, or ${socialLinks.slice(-1)}.`;
+const socialParagraph = `You can also find me on ${socialLinks.slice(0, -1).join(', ')}, or ${socialLinks.slice(-1)}.`;
 ---
 
 <hr />
 <footer class="w-full">
   <h2>🙌 Thanks for stopping by</h2>
   <p>
-    You're viewing <a href={site["site-url"]}
-      >{site["site-url"].replace("https://", "")}</a
+    You're viewing <a href={site['site-url']}
+      >{site['site-url'].replace('https://', '')}</a
     > at commit <a
       href=`https://github.com/jakemulley/jakemulley.github.io/commit/${commitHash}`
       >{commitHash}</a

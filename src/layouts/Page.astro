@@ -1,5 +1,5 @@
 ---
-import Layout from "./Layout.astro";
+import Layout from './Layout.astro';
 
 const { frontmatter } = Astro.props;
 ---
@@ -10,15 +10,15 @@ const { frontmatter } = Astro.props;
       <h1 set:html={frontmatter.title} />
       {
         !frontmatter.date ? (
-          ""
+          ''
         ) : (
           <p>
-            Published on{" "}
+            Published on{' '}
             <time datetime={frontmatter.date.toISOString()}>
-              {frontmatter.date.toLocaleString("en-GB", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
+              {frontmatter.date.toLocaleString('en-GB', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
               })}
             </time>
           </p>

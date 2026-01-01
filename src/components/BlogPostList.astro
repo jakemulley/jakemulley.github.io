@@ -1,7 +1,7 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection("blog");
+const allPosts = await getCollection('blog');
 ---
 
 <ol reversed>
@@ -10,10 +10,10 @@ const allPosts = await getCollection("blog");
       <li>
         <a href={`/blog/${post.slug}/`}>{post.data.title}</a> on
         <time datetime={post.data.date.toISOString()}>
-          {post.data.date.toLocaleString("en-GB", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
+          {post.data.date.toLocaleString('en-GB', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
           })}
         </time>
       </li>

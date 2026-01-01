@@ -1,6 +1,6 @@
 ---
 title: 👋 Hello! I'm <a href="/" class="font-bold">Jake Mulley</a>.
-layout: "../layouts/Page.astro"
+layout: '../layouts/Page.astro'
 ---
 
 I'm currently a **Principal Cloud Engineer** at [PhysicsX](https://www.physicsx.ai), a [series B startup](https://www.physicsx.ai/newsroom/physicsx-raises-135m-series-b-to-usher-in-a-new-era-of-ai-native-engineering-and-manufacturing) that is accelerating industrial innovation with AI.
