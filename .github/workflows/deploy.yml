@@ -20,22 +20,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: withastro/action@v5
         with:
-          node-version: 22
-          cache: "npm"
-      - uses: actions/configure-pages@v5
-        id: pages
-      - run: npm ci
+          node-version: 24
+          package-manager: npm
       - run: npm run ci
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: github.ref == 'refs/heads/main'
     needs: build
     environment:
       name: github-pages
