@@ -3,6 +3,7 @@ import BlogPostList from '../components/BlogPostList.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import site from '../data/site.json';
+import '../styles/global.css';
 
 const { title, description } = Astro.props;
 const url = Astro.url.pathname;
@@ -86,7 +87,7 @@ const url = Astro.url.pathname;
 
     <div class="mx-auto max-w-2xl p-8">
       <div
-        class="prose prose-slate max-w-none lg:prose-lg dark:prose-invert prose-a:border-2 prose-a:border-transparent prose-a:underline prose-a:decoration-valencia-500 prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:border-valencia-500 hover:prose-a:bg-valencia-500 hover:prose-a:text-white prose-img:rounded-md lg:prose-img:rounded-lg"
+        class="prose prose-slate max-w-none lg:prose-lg dark:prose-invert prose-a:border-2 prose-a:border-transparent prose-a:underline prose-a:decoration-valencia-500 prose-a:decoration-2 prose-a:underline-offset-2 prose-a:hover:border-valencia-500 prose-a:hover:bg-valencia-500 prose-a:hover:text-white prose-img:rounded-md lg:prose-img:rounded-lg"
       >
         <Header />
         <main id="main" tabindex="-1">
