@@ -1,13 +1,6 @@
 ---
 import site from '../data/site.json';
-import socials from '../data/socials.json';
 import { commitHash } from '../utils/helpers.js';
-
-const socialLinks = socials.map(
-  (item) => `<a href="${item.href}">${item.title}</a>`,
-);
-
-const socialParagraph = `You can also find me on ${socialLinks.slice(0, -1).join(', ')}, or ${socialLinks.slice(-1)}.`;
 ---
 
 <hr />
@@ -21,5 +14,11 @@ const socialParagraph = `You can also find me on ${socialLinks.slice(0, -1).join
       >{commitHash}</a
     >.
   </p>
-  <p set:html={socialParagraph} />
+  <p>
+    You can also find me on <a href="https://linkedin.com/in/jakemulley"
+      >LinkedIn</a
+    >, <a href="https://github.com/jakemulley">GitHub</a>, <a
+      href="https://mastodon.social/@jsm">Mastodon</a
+    >, or <a href="mailto:me@jakemulley.com">via email</a>.
+  </p>
 </footer>
