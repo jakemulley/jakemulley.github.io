@@ -4,6 +4,9 @@
   "description": "A static site for jakemulley.com",
   "type": "module",
   "packageManager": "npm@11.19.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jakemulley/jakemulley.github.io.git"
@@ -27,7 +30,7 @@
     "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^6.4.8",
+    "astro": "^7.3.1",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
@@ -36,7 +39,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.8.1"
   },
-  "overrides": {
-    "vite": "^7"
+  "allowScripts": {
+    "esbuild": true
   }
 }
