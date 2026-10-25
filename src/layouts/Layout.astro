@@ -14,23 +14,19 @@ const url = Astro.url.pathname;
   <head>
     <meta charset="utf-8" />
 
-    {
-      url === '/' ? (
-        <title set:html={site['site-title']} />
-      ) : (
-        <title set:html={[title, site['site-title']].join(' | ')} />
-      )
-    }
+    {url === '/' ? (
+      <title set:html={site['site-title']} />
+    ) : (
+      <title set:html={[title, site['site-title']].join(' | ')} />
+    )}
 
     <meta name="author" content={site['site-author']} />
 
-    {
-      description ? (
-        <meta name="description" content={description} />
-      ) : (
-        <meta name="description" content={site['site-description']} />
-      )
-    }
+    {description ? (
+      <meta name="description" content={description} />
+    ) : (
+      <meta name="description" content={site['site-description']} />
+    )}
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -38,29 +34,25 @@ const url = Astro.url.pathname;
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph protocol (https://ogp.me) -->
-    {
-      url === '/' ? (
-        <meta property="og:title" content={site['site-title']} />
-      ) : (
-        <meta
-          property="og:title"
-          content={[title, site['site-title']].join(' | ')}
-        />
-      )
-    }
+    {url === '/' ? (
+      <meta property="og:title" content={site['site-title']} />
+    ) : (
+      <meta
+        property="og:title"
+        content={[title, site['site-title']].join(' | ')}
+      />
+    )}
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
       content={`${site['site-url']}/images/profile.jpeg`}
     />
     <meta property="og:url" content={`${site['site-url']}${url}`} />
-    {
-      description ? (
-        <meta property="og:description" content={description} />
-      ) : (
-        <meta property="og:description" content={site['site-description']} />
-      )
-    }
+    {description ? (
+      <meta property="og:description" content={description} />
+    ) : (
+      <meta property="og:description" content={site['site-description']} />
+    )}
     <meta property="og:locale" content="en" />
     <meta property="og:site_name" content={site['site-title']} />
 
@@ -82,31 +74,28 @@ const url = Astro.url.pathname;
       href="#main"
       id="skip-link"
       class="absolute m-0 block h-px w-px overflow-hidden whitespace-nowrap underline focus:absolute focus:z-10 focus:h-auto focus:w-auto focus:overflow-visible"
-      >Skip to main content</a
     >
+      Skip to main content
+    </a>
 
     <div class="mx-auto max-w-2xl p-8">
-      <div
-        class="prose max-w-none prose-slate lg:prose-lg dark:prose-invert prose-a:border-2 prose-a:border-transparent prose-a:underline prose-a:decoration-valencia-500 prose-a:decoration-2 prose-a:underline-offset-2 prose-a:hover:border-valencia-500 prose-a:hover:bg-valencia-500 prose-a:hover:text-white prose-img:rounded-md lg:prose-img:rounded-lg"
-      >
+      <div class="prose max-w-none prose-slate lg:prose-lg dark:prose-invert prose-a:border-2 prose-a:border-transparent prose-a:underline prose-a:decoration-valencia-500 prose-a:decoration-2 prose-a:underline-offset-2 prose-a:hover:border-valencia-500 prose-a:hover:bg-valencia-500 prose-a:hover:text-white prose-img:rounded-md lg:prose-img:rounded-lg">
         <Header />
         <main id="main" tabindex="-1">
           <slot />
-          {
-            url === '/' ? (
-              <>
-                <h2>📝 Blog posts</h2>
-                <BlogPostList />
-              </>
-            ) : (
-              <>
-                <hr />
-                <nav>
-                  <a href="/">&larr; Back home</a>
-                </nav>
-              </>
-            )
-          }
+          {url === '/' ? (
+            <>
+              <h2>📝 Blog posts</h2>
+              <BlogPostList />
+            </>
+          ) : (
+            <>
+              <hr />
+              <nav>
+                <a href="/">&larr; Back home</a>
+              </nav>
+            </>
+          )}
         </main>
         <Footer />
       </div>

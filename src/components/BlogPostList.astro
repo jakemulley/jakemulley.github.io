@@ -5,18 +5,16 @@ const allPosts = await getCollection('blog');
 ---
 
 <ol reversed>
-  {
-    allPosts.map((post) => (
-      <li>
-        <a href={`/blog/${post.id}/`}>{post.data.title}</a> on
-        <time datetime={post.data.date.toISOString()}>
-          {post.data.date.toLocaleString('en-GB', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })}
-        </time>
-      </li>
-    ))
-  }
+  {allPosts.map((post) => (
+    <li>
+      <a href={`/blog/${post.id}/`}>{post.data.title}</a> on{' '}
+      <time datetime={post.data.date.toISOString()}>
+        {post.data.date.toLocaleString('en-GB', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      </time>
+    </li>
+  ))}
 </ol>

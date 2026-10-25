@@ -7,18 +7,21 @@ import { commitHash } from '../utils/helpers.js';
 <footer class="w-full">
   <h2>🙌 Thanks for stopping by</h2>
   <p>
-    You're viewing <a href={site['site-url']}
-      >{site['site-url'].replace('https://', '')}</a
-    > at commit <a
+    You're viewing{' '}
+    <a href={site['site-url']}>{site['site-url'].replace('https://', '')}</a> at
+    commit{' '}
+    <a
       href=`https://github.com/jakemulley/jakemulley.github.io/commit/${commitHash}`
-      >{commitHash}</a
-    >.
+    >
+      {commitHash}
+    </a>
+    .
   </p>
   <p>
-    You can also find me on <a href="https://linkedin.com/in/jakemulley"
-      >LinkedIn</a
-    >, <a href="https://github.com/jakemulley">GitHub</a>, <a
-      href="https://mastodon.social/@jsm">Mastodon</a
-    >, or <a href="mailto:me@jakemulley.com">via email</a>.
+    You can also find me on{' '}
+    <a href="https://linkedin.com/in/jakemulley">LinkedIn</a>,{' '}
+    <a href="https://github.com/jakemulley">GitHub</a>,{' '}
+    <a href="https://mastodon.social/@jsm">Mastodon</a>, or{' '}
+    <a href="mailto:me@jakemulley.com">via email</a>.
   </p>
 </footer>
