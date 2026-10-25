@@ -8,22 +8,20 @@ const { frontmatter } = Astro.props;
   <article>
     <header>
       <h1 set:html={frontmatter.title} />
-      {
-        !frontmatter.date ? (
-          ''
-        ) : (
-          <p>
-            Published on{' '}
-            <time datetime={frontmatter.date.toISOString()}>
-              {frontmatter.date.toLocaleString('en-GB', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </time>
-          </p>
-        )
-      }
+      {!frontmatter.date ? (
+        ''
+      ) : (
+        <p>
+          Published on{' '}
+          <time datetime={frontmatter.date.toISOString()}>
+            {frontmatter.date.toLocaleString('en-GB', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
+        </p>
+      )}
     </header>
     <slot />
   </article>
